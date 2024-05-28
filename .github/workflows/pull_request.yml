@@ -1,5 +1,7 @@
 name: Pull request raised
-on: [pull_request]
+on:
+  pull_request:
+    branches: [main] # CI gets triggered on pull requests to the main branch
 jobs:
   terraform-validate:
     runs-on: ubuntu-latest
