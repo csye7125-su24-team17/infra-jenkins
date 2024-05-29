@@ -38,5 +38,10 @@ $ terraform apply
    Destroy infrastructure:
 
 ```console
-$ terraform destroy
+$ terraform destroy  
 ```
+## Infrastructure managed outside of Terraform  
+
+1. `Elastic IP`: Due to frequent terraform apply and destroy operations, elastic IP is managed independently of Terraform, so as to attach the same elastic IP everytime on doing a 'terraform apply', and dissociating it (not detroy) on doing a 'terraform destroy'.  
+
+2. `DNS Hosted Zone`: Hosted zone is a permanent resource, need not be destroyed and recreated everytime with tf apply and destroy operations.  
