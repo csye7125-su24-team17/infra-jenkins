@@ -4,6 +4,9 @@ variable "aws_region" {
 variable "vpc_cidr" {
   type = string
 }
+variable "vpc_name" {
+  type = string
+}
 variable "subnet_availability_zone" {
   type = string
 }
